@@ -1,0 +1,22 @@
+Currying functions
+
+The function below has two arguments:
+
+function add(a,b) {
+  return a+b
+}
+
+A function may have more than one invocation:
+
+function add(a)(b)
+
+So how does this work? 
+
+This function applies each argument in turn to a single-argument function.
+
+function add(a) {
+  return function(b) {
+    return a+b
+  }
+}
+
